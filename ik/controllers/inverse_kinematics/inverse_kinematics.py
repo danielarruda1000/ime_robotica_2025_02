@@ -104,10 +104,8 @@ def s_quintico_derivadas(t,T):
     
     tau = t / T
     
-    # ṡ(t) | Velocidade
     s_dot = (30/T) * (tau**2) - (60/T) * (tau**3) + (30/T) * (tau**4)
 
-    # s̈(t) | Aceleração
     s_ddot = (60/T**2) * tau - (180/T**2) * (tau**2) + (120/T**2) * (tau**3)
 
     return s_dot, s_ddot
@@ -303,3 +301,20 @@ plt.savefig("s_ddot_t_real.png")
 plt.close()
 
 print("Gráficos gerados: s_t_real.png, s_dot_t_real.png, s_ddot_t_real.png")
+
+with open("time_log.txt", "w", encoding="utf-8") as f:
+    f.write(str(time_log))
+    f.close()
+
+with open(f"{escalonamento}_s_log.txt", "w", encoding="utf-8") as f:
+    f.write(str(s_log))
+    f.close()
+
+with open(f"{escalonamento}_sdot_log.txt", "w", encoding="utf-8") as f:
+    f.write(str(sdot_log))
+    f.close()
+
+with open(f"{escalonamento}_sddot_log.txt", "w", encoding="utf-8") as f:
+    f.write(str(sddot_log))
+    f.close()
+print("Arquivos de dados gerados: s_log.txt, sdot_log.txt, sddot_log.txt")

@@ -1,2 +1,3 @@
 ikpy
 matplotlib
+ffmpeg

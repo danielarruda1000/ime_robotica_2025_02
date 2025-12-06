@@ -4,6 +4,7 @@ import json
 
 import numpy as np
 import matplotlib.pyplot as plt
+from .ik.controllers.inverse_kinematics.animation import criar_animacao
 
 # listas para coletar dados
 time_log = []
@@ -303,3 +304,8 @@ plt.savefig("s_ddot_t_real.png")
 plt.close()
 
 print("Gráficos gerados: s_t_real.png, s_dot_t_real.png, s_ddot_t_real.png")
+
+print('Gerando animação do escalonamento...')
+criar_animacao(time_log, s_log, escalonamento, 's(t)')
+criar_animacao(time_log, s_log_dot, escalonamento, 'ṡ(t)')
+criar_animacao(time_log, sddot_log, escalonamento, 's̈(t)')
