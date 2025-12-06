@@ -1,1 +1,2 @@
-"# ime_robotica_2025_02" 
+# Link do video no youtube:
+https://youtu.be/kLGk0qqt_gk
